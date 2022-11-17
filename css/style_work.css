@@ -1,0 +1,177 @@
+.container-all {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    transition: 1s;
+    padding-left: 30%;
+}
+
+#sidebar.active {
+    margin-left: -200px;
+}
+
+/*.container-left {
+    z-index: 9999;
+}*/
+
+.container-right {
+    background-color: black;
+    margin-left: 250px;
+    width: 100%;    
+    text-align: center;
+    /*padding: 30px;*/
+    padding-top: 15px;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+}
+
+.collapse-btn {
+    position: relative;
+    top: 1%;
+    left: 200px;
+    background-color: indigo;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.collapse-btn:hover {
+    background-color: rgb(120, 5, 203);
+    transition: 0.4s;
+}
+
+#sidebar p {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 25px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+#sidebar ul li a:hover {
+    color: gray;
+    /*background: #fff;*/
+}
+
+.fas,
+.far,
+.fab {
+    float: right;
+}
+
+ul ul li a {
+    background-color: rgb(203, 142, 247);
+    font-size: 30px;
+    font-style: italic;
+}
+
+/*@media (max-width:600px) {
+    #sidebar {
+        margin-left: -100px;
+        width: 150px;
+        font-size: 20px;
+    }
+    .collapse-btn {
+        position: relative;
+        top: 1%;
+        left: 110px;
+    }
+    #sidebar.active {
+        margin-left: 0px;
+    }
+    #sidebar ul p {
+        font-size: 18px;
+        text-align: left;
+    }
+    .container-right {
+        margin-left: 15%;
+    }
+}*/
+
+@media (max-width:600px) {    
+    .container-left {
+        visibility: hidden;
+    }    
+    .container-right {
+        margin-left: 15%;
+    }
+}
+
+@media (min-width:600px) {    
+    .collapse-btn {
+        visibility: hidden;
+    }
+    .header {
+        visibility: hidden;
+        height: 0;
+    }
+}
+
+.header {
+    text-align: left;
+}
+
+/*設定還沒有瀏覽過的連結*/
+.header a:link {
+    text-decoration:none;
+    color: #fff;   
+}
+
+/*設定已經瀏覽過的連結*/
+.header a:visited {
+    text-decoration:none;
+    color: #fff;
+}
+
+/*設定滑鼠移經的連結*/
+.header a:hover {
+    text-decoration:underline;
+    background-color:#fafafa;
+    color:gray;
+}
+
+/*設定正在點選的連結*/
+.header a:active {
+    
+}
+
+.text {
+    text-align: left;
+    color: #fff;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+h5 {
+    font-family: 'Bahnschrift','微軟正黑體', sans-serif;
+    letter-spacing: 1px;
+}
+
+p {
+    letter-spacing: 1px;
+    line-height: 1.7;
+}
